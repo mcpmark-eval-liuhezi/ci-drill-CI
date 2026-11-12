@@ -1,0 +1,14 @@
+name: Drill Soak
+
+on:
+  workflow_dispatch:
+
+jobs:
+  soak-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Soak for ~20 minutes
+        run: |
+          echo "Drill Soak started at $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          sleep 1200
+          echo "Soak completed successfully at $(date -u +%Y-%m-%dT%H:%M:%SZ)"
